@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+    .container {
+        box-sizing: border-box;
+        border: 1px solid #000;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        background: #0076bb;
+        color: #fff;
+        width: 300px;
+        height: 250px; 
+    }
+    button {
+        margin-top: 1rem;
+        margin-left: 5rem;
+    }
+    label{
+        margin-left: 1rem;
+    }
+    input{
+        margin-left: 1rem;
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>Login Page</h1>
+    <form method="POST" action="/login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    </div>
+    <script>
+        function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+      </script>
+</body>
+</html>
